@@ -34,7 +34,7 @@ The script does the following:
 | `--issue-replay-pagesize`      | During issue replay, what page size should we use? Default = 50   | int            |
 | `--issue-replay-stop-at`       | During issue replay, how many issues should we maximum replay? Set this to a lower value if the program does not terminate within a reasonable time. Doing so might mean that not all available states are reported. Default = all issues in the project  | int            |
 | `--only-project-level-users`   | Add this flag if you only want the users of the Jira Project (SourceProject in the metaconfig.json) to appear in the report. Otherwise all users in the entire organization will be outputted. | string         |
-| `--auth-scheme`                | Auth scheme to use for the Jira Rest API. Must be either 'basic' or 'bearer'. Default = 'basic' | string             |
+| `--auth-scheme`                | Auth scheme to use for the Jira Rest API. Must be either 'basic', 'bearer' or 'bearer-unencoded'. Default = 'basic' | string             |
 | `--jira-server-8-4-or-newer`   | Add this flag if you are using Jira Server version 8.4.x or later | boolean        |
 | `--timeout`                    | Override the timeout used for all Jira Rest API Queries (seconds). Default = 30    | int            |
 | `--no-ssl-verify`              | Add this flag if you want to skip the SSL verification against your Jira Server    | boolean        |
