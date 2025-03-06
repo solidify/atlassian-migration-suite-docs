@@ -105,3 +105,25 @@ To use a custom certificate store, set the `REQUESTS_CA_BUNDLE` environment vari
 ```bash
 $env:REQUESTS_CA_BUNDLE = "C:\temp\cacert.pem"
 ```
+
+## Troubleshooting
+
+### Failed to execute script 'jira_migrator_bootstrapper' due to unhandled exception!
+
+A crash can sometimes happen when the bootstrapper is enumerating the Jira projects and the issuetype metadata. This is usually indicative of an authorization problem.
+
+Here is an example stacktrace:
+
+```log
+Traceback (most recent call last):
+File "jira_migrator_bootstrapper.py", line 968, in <module>
+File "jira_migrator_bootstrapper.py", line 276, in run
+File "jira_migrator_bootstrapper.py", line 674, in get_issue_type_fields
+IndexError: list index out of range
+```
+
+Running the bootstrapper again with the `--log-level` parameter set to `debug` will produce a more informative log, including information about the failed API call.
+
+The solution is usually to **add yourself to the Administrator group of the relevant Jira Project**.
+
+Here are some more, general solutions to try regarding Jira API authorization problems: <https://github.com/solidify/jira-azuredevops-migrator/blob/master/docs/faq.md#2-why-i-am-getting-unauthorized-exception-when-running-the-export>
