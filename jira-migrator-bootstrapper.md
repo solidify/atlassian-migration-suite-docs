@@ -14,7 +14,7 @@ The script does the following:
 - Produces a `available-fields.json` file, which contains a report of all available **fields** in your Jira instance, to help you with field mapping.
 - Produces a `available-states.json` file, which contains a report of all available **statues** in your Jira instance, to help you with state mapping.
 - Produces a `available-users.csv` file, which contains a report of all available **users** in your Jira instance, to assist with user mapping.
-- Produces a `users-generated.txt` file, which is a suggestion for a `users.txt` file. It includes all user mappings that the tool could discern automatically. You can base your own `users.txt` file on this file.
+- Produces a `users.txt` file. It includes all user mappings that the tool could discern automatically. You can base your own `users.txt` file on this file.
 
 ## Usage
 
