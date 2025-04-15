@@ -619,10 +619,32 @@ Alternatively, the following configuration may also work:
 --token "[API token]"
 ```
 
-### SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate
+### SSL Configuration
 
-To address this error message, you can use a custom certificate store. Set the `REQUESTS_CA_BUNDLE` environment variable to the desired file path before running the tool:
+On some occasions, you may receive an error message similar to this one when running the tool:
+
+```
+SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate
+```
+
+Below are the options for managing SSL behavior:
+
+#### **Skipping SSL Verification**
+
+To bypass SSL verification when connecting to the Jira Server, use the `--no-ssl-verify` flag
+
+#### **Debugging SSL Certificate Store Path**
+
+When the `--log-level` parameter is set to `debug`, the tool logs the path to the certificate store used for SSL verification:
+
+```
+2024-11-13 10:44:42,243 : DEBUG : Using certificate store at path (put any SSL certificates here): 
+C:\Users\Alexander\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\certifi\cacert.pem
+```
+
+#### **Specifying a Custom Certificate Store**
+To use a custom certificate store, set the `REQUESTS_CA_BUNDLE` environment variable to the desired file path before running the tool:
 
 ```bash
-$env:REQUESTS_CA_BUNDLE = "C:\example\cacert.pem"
+$env:REQUESTS_CA_BUNDLE = "C:\temp\cacert.pem"
 ```
