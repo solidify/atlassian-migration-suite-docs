@@ -596,6 +596,10 @@ For the space at `https://solidifydemo.atlassian.net/wiki/spaces/PMT/overview?ho
 
 This error has also been shown to appear if the command used to run the Confluence ADO Migrator .exe is stored in a .ps1-file and the .ps1 file does not have UTF-16 encoding. Try changing the encoding of the script to UTF-16 and run again.
 
+#### Invalid value of --confluence-space-name
+
+This error has also been shown to appear if the value of --confluence-space-name does not match the Confluence Space Name exactly. Please set the correct value (In conflunece, go to Space Settings > Space Details. Here, the Name is the space name.)
+
 ### Page is not migrated due to view+edit restrictions
 
 If a Confluence Page is protected by view or edit restrictions, the page might not be exported as expected. You may need to disable page restrictions in order to ensure that these pages are exported by Confluence.
