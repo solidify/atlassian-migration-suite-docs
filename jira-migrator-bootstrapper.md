@@ -19,9 +19,9 @@ The script does the following:
 ## Usage
 
 1. Set up your `metaconfig.json` file
-1. Run `jira-migrator-bootstrapper.exe`
+1. Run `jira_migrator_bootstrapper.exe`
 
-`jira-migrator-bootstrapper.exe` takes the following parameters:
+`jira_migrator_bootstrapper.exe` takes the following parameters:
 
 | Option                         | Description                                                       | Parameter Type |
 | ------------------------------ | ----------------------------------------------------------------- | -------------- |
@@ -45,13 +45,13 @@ The script does the following:
 #### Jira Cloud or Server < 8.4.0
 
 ```powershell
-.\jira-migrator-bootstrapper.exe --base-url https://solidifydemo.atlassian.net/ --project-key AGILEDEMO --username alexander.hjelm@solidify.dev --password xxxxxx --license-file-path C:\Temp\solidifydemo.atlassian.net.20XX-XX-XX.json --issue-replay-pagesize 50 --issue-replay-stop-at 1000 --log-level info
+.\jira_migrator_bootstrapper.exe --base-url https://solidifydemo.atlassian.net/ --project-key AGILEDEMO --username alexander.hjelm@solidify.dev --password xxxxxx --license-file-path C:\Temp\solidifydemo.atlassian.net.20XX-XX-XX.json --issue-replay-pagesize 50 --issue-replay-stop-at 1000 --log-level info
 ```
 
 #### Jira Server >= 8.4.0
 
 ```powershell
-.\jira-migrator-bootstrapper.exe --base-url https://solidifydemo.atlassian.net/ --project-key AGILEDEMO --username alexander.hjelm@solidify.dev --password xxxxxx --license-file-path C:\Temp\solidifydemo.atlassian.net.20XX-XX-XX.json --issue-replay-pagesize 50 --issue-replay-stop-at 1000 --jira-server-8-4-or-newer --log-level info
+.\jira_migrator_bootstrapper.exe --base-url https://solidifydemo.atlassian.net/ --project-key AGILEDEMO --username alexander.hjelm@solidify.dev --password xxxxxx --license-file-path C:\Temp\solidifydemo.atlassian.net.20XX-XX-XX.json --issue-replay-pagesize 50 --issue-replay-stop-at 1000 --jira-server-8-4-or-newer --log-level info
 ```
 
 ## Meta configuration file details
