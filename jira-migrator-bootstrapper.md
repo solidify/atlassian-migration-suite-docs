@@ -25,7 +25,7 @@ The script does the following:
 
 | Option                         | Description                                                       | Parameter Type |
 | ------------------------------ | ----------------------------------------------------------------- | -------------- |
-| `--meta-config-path`           | Path to the metaconfig.json file.                                 | string         |
+| `--meta-config-filepath`       | Path to the metaconfig.json file.                                 | string         |
 | `--base-url`                   | Base URL of the Jira instance.                                    | string         |
 | `--project-key`                | Key of the Jira project.                                          | string         |
 | `--username`                   | Jira username.                                                    | string         |
