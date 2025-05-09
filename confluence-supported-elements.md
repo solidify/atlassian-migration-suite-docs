@@ -64,7 +64,7 @@ The following table contains the status of each element in the **Insert elements
 | Issue Statistics                          |          |          | ❌         |          |          |
 | Issues in progress                        |          |          | ❌         |          |          |
 | Jira Charts                               |          |          | ❌         |          |          |
-| Jira Issues                               |          |          | ❌         |          | The table is converted to a Jira JQL filter hyperlink.         |
+| Jira Issues / Jira Work Items             |          |          | ❌         |          | The table is converted to a Jira JQL filter hyperlink.         |
 | Jira Issues Calendar                      |          |          | ❌         |          |          |
 | Jira Legacy                               | ✔️         |          |          |          |          |
 | Jira Premium plan                         |          |          |          | ✖️         |          |
