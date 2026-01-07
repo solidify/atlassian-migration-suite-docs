@@ -27,6 +27,7 @@ The script does the following:
 | ------------------------------ | ----------------------------------------------------------------- | -------------- |
 | `--meta-config-path`           | Path to the metaconfig.json file.                                 | string         |
 | `--base-url`                   | Base URL of the Jira instance.                                    | string         |
+| --jira-api-version             | Version of the Jira API to use. Must be either 2 or 3. Default: 3.| int            |
 | `--project-key`                | Key of the Jira project.                                          | string         |
 | `--username`                   | Jira username.                                                    | string         |
 | `--password`                   | Jira API token.                                                   | string         |
@@ -51,7 +52,7 @@ The script does the following:
 #### Jira Server >= 8.4.0
 
 ```powershell
-.\jira-migrator-bootstrapper.exe --base-url https://solidifydemo.atlassian.net/ --project-key AGILEDEMO --username alexander.hjelm@solidify.dev --password xxxxxx --license-file-path C:\Temp\solidifydemo.atlassian.net.20XX-XX-XX.json --issue-replay-pagesize 50 --issue-replay-stop-at 1000 --jira-server-8-4-or-newer --log-level info
+.\jira-migrator-bootstrapper.exe --base-url https://solidifydemo.atlassian.net/ --project-key AGILEDEMO --username alexander.hjelm@solidify.dev --password xxxxxx --license-file-path C:\Temp\solidifydemo.atlassian.net.20XX-XX-XX.json --issue-replay-pagesize 50 --issue-replay-stop-at 1000 --jira-server-8-4-or-newer --jira-api-version 2 --log-level info
 ```
 
 ## Meta configuration file details
