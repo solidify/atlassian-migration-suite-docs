@@ -27,7 +27,7 @@ The script does the following:
 | ------------------------------ | ----------------------------------------------------------------- | -------------- |
 | `--meta-config-path`           | Path to the metaconfig.json file.                                 | string         |
 | `--base-url`                   | Base URL of the Jira instance.                                    | string         |
-| --jira-api-version             | Version of the Jira API to use. Must be either 2 or 3. Default: 3.| int            |
+| `--jira-api-version`           | Version of the Jira API to use. Must be either 2 or 3. Default: 3.| int            |
 | `--project-key`                | Key of the Jira project.                                          | string         |
 | `--username`                   | Jira username.                                                    | string         |
 | `--password`                   | Jira API token.                                                   | string         |
